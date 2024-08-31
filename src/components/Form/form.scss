@@ -1,0 +1,41 @@
+@use '../../styles/variables' as v;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1em 0;
+
+  &-input {
+    width: 15em;
+    padding: 0.5em;
+    border: 1px solid v.$color-border;
+    border-radius: 1em;
+    text-align: center;
+    font-size: 1.1em;
+    text-transform: uppercase;
+  }
+  &-input::placeholder {
+    font-size: 0.7em;
+  }
+
+  &-input:focus {
+    outline: 2px solid v.$color-primary;
+  }
+
+  &-btn {
+    margin: 1em 0;
+    background: v.$color-primary;
+    color: v.$color;
+    padding: 0.5em;
+    border: 1px solid v.$color-border;
+    border-radius: 1em;
+    font-size: 1.2em;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.35);
+  }
+
+  &-btn:active {
+    box-shadow: inset 0px 10px 13px 5px rgba(0, 0, 0, 0.1);
+  }
+}
