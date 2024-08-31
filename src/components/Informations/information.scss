@@ -1,50 +1,64 @@
-@use '../../styles/variables' as v;
+@use "../../styles/variables" as v;
 
 .info-container {
-  width: 60vw;
-  margin: 1em;
-  padding: 1.5em;
-  border: 1px solid v.$color-border;
-  border-radius: 1em;
-  box-shadow: inset 3px 3px 10px 5px rgba(0, 0, 0, 0.146);
+    width: 100%;
+    max-width: 50vw;
+    margin: 0 auto;
+    padding: 1.5em;
+    border: 1px solid v.$color-border;
+    border-radius: 1em;
+    box-shadow: inset 3px 3px 10px 5px rgba(0, 0, 0, 0.146);
 
-  &-title {
-    text-align: center;
-    margin: 1em 0;
-    text-decoration: underline;
-    text-underline-offset: 0.4em;
-    text-decoration-color: v.$color-primary;
-    text-decoration-thickness: 0.1em;
-  }
-  &-item {
-    margin: 1.2em 0;
-    color: v.$color-primary;
-    text-shadow: 1px 1px 1px rgb(149, 101, 4);
-  }
-  &-nodata {
-    font-weight: bold;
-    text-align: center;
-  }
+    @media (max-width: 600px) {
+        max-width: 90vw;
+        margin-bottom: 1rem;
+    }
+
+    &-title {
+        text-align: center;
+        margin: 1em 0;
+        text-decoration: underline;
+        text-underline-offset: 0.4em;
+        text-decoration-color: v.$color-primary;
+        text-decoration-thickness: 0.1em;
+
+        @media (max-width: 600px) {
+            font-size: 1rem;
+        }
+    }
+    &-item {
+        margin: 1.2em 0;
+        color: v.$color-primary;
+        text-shadow: 1px 1px 1px rgb(149, 101, 4);
+    }
+    &-nodata {
+        font-weight: bold;
+        text-align: center;
+    }
 }
 span {
-  font-weight: bold;
-  color: #111;
+    font-weight: bold;
+    color: #111;
 }
 
 /* HTML: <div class="loader"></div> */
 .loader {
-  width: 50px;
-  margin: 0 auto;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: radial-gradient(farthest-side, #ffa516 94%, #0000) top/8px 8px
-      no-repeat,
-    conic-gradient(#0000 30%, #ffa516);
-  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
-  animation: l13 1.5s infinite linear;
+    width: 50px;
+    margin: 0 auto;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(farthest-side, #ffa516 94%, #0000) top/8px 8px
+            no-repeat,
+        conic-gradient(#0000 30%, #ffa516);
+    -webkit-mask: radial-gradient(
+        farthest-side,
+        #0000 calc(100% - 8px),
+        #000 0
+    );
+    animation: l13 1.5s infinite linear;
 }
 @keyframes l13 {
-  100% {
-    transform: rotate(1turn);
-  }
+    100% {
+        transform: rotate(1turn);
+    }
 }

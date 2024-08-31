@@ -1,32 +1,46 @@
-@use '../../styles/variables' as v;
+@use "../../styles/variables" as v;
 
 .header-container {
-  &-banner {
-    height: 20vh;
-    background: bottom / cover url(../../assets/banner.jpeg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 8em;
-    color: v.$color;
-    text-shadow: 2px 2px 1px v.$color-primary;
-  }
+    &-banner {
+        height: 20vh;
+        background: center / cover url(../../assets/banner.jpeg) fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 8em;
+        color: v.$color;
+        text-shadow: 2px 2px 1px v.$color-primary;
+
+        @media (max-width: 600px) {
+            font-size: 4rem;
+        }
+    }
 }
 
 .description {
-  width: 80%;
-  padding: 2em;
-  margin: 1em auto;
-  text-align: center;
-  font-size: 1em;
-  border-bottom: 1px solid grey;
+    width: 80%;
+    padding: 2em;
+    margin: 1em auto;
+    text-align: center;
+    font-size: 1em;
+    border-bottom: 1px solid grey;
+
+    @media (max-width: 600px) {
+        width: 100%;
+        text-align: justify;
+    }
 }
 
 .slogan {
-  text-align: center;
-  margin: 1em 0;
-  font-size: 1.4em;
-  font-weight: bold;
-  color: v.$color-primary;
-  text-shadow: 1px 1px 1px grey;
+    text-align: center;
+    margin: 1em 0;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: v.$color-primary;
+    text-shadow: 1px 1px 1px grey;
+
+    @media (max-width: 600px) {
+        width: 90%;
+        margin: 0 auto;
+    }
 }
