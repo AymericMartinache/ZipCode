@@ -1,3 +1,39 @@
-$color: #fff;
-$color-primary: #f0c91c;
-$color-border: #9d9d9d;
+// Modern Apple-inspired color palette
+$color-white: #ffffff;
+$color-black: #000000;
+$color-text: #1d1d1f;
+$color-text-secondary: #6e6e73;
+
+// Primary colors - Modern blue gradient
+$color-primary: #007aff;
+$color-primary-light: #5ac8fa;
+$color-primary-dark: #0051d5;
+
+// Accent colors
+$color-accent: #5e5ce6;
+$color-success: #34c759;
+$color-warning: #ff9500;
+
+// Backgrounds
+$color-bg-light: rgba(255, 255, 255, 0.8);
+$color-bg-blur: rgba(255, 255, 255, 0.25);
+$color-bg-card: rgba(255, 255, 255, 0.7);
+
+// Borders
+$color-border: rgba(255, 255, 255, 0.18);
+$color-border-subtle: rgba(0, 0, 0, 0.05);
+
+// Shadows
+$shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+$shadow-md: 0 4px 20px rgba(0, 0, 0, 0.12);
+$shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+
+// Border radius
+$radius-sm: 12px;
+$radius-md: 20px;
+$radius-lg: 28px;
+
+// Blur
+$blur-sm: 10px;
+$blur-md: 20px;
+$blur-lg: 40px;
